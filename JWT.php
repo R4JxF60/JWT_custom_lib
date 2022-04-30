@@ -210,10 +210,3 @@ class JWT {
     }
 
 }
-
-$jwt = new JWT;
-$head = ['typ' => 'JWT', 'alg' => 'HS256'];
-$payload = ['name' => 'rajitha', 'age' => 03, 'school' => 'BC'];
-$encodedString = $jwt->encode($payload, "ABCD", "HS256", $head);
-var_dump($encodedString);
-var_dump($jwt->decode($encodedString, 'ABCD'));
